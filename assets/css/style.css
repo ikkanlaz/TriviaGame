@@ -1,5 +1,9 @@
 body {
-    font-family: 'Reenie Beanie', cursive;
+    font-family: 'PT Sans', sans-serif;
     color: #555555;
     background-image: url(https://ikkanlaz.github.io/TriviaGame/assets/images/cloudy-day.png);
+}
+
+h1 {
+    font-family: 'Love Ya Like A Sister', cursive;
 }
