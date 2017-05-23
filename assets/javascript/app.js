@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    var questionCount = 0;
+    var questionCount;
+    var gameStarted = false;
+    var score;
     var questions = [
         {
             question: "South Africa completely surrounds which other African nation?",
@@ -91,22 +93,29 @@ $(document).ready(function () {
                 $("#time").text(timer.time);
             } else {
                 timer.stop();
-                // showAnswer();
+                displayAnswer("Out of time. " + questions[questionCount].answerDescription);
             }
         },
         stop: function () {
             clearInterval(intervalId);
             timer.clockRunning = false;
         },
+        reset: function () {
+            timer.time = 8;
+        }
     }
 
     function setupGame() {
-        $(this).css("display", "none");
-        displayQuestion();
-        timer.start();
-        $("#time-container").css("display", "block");
-        $("#question-container").css("display", "block");
-        $("#answers-container").css("display", "block");
+        if (gameStarted === false) {
+            score = 0;
+            questionCount = 0;
+            $("#start-button").css("display", "none");
+            gameStarted = true;
+            displayQuestion();
+            $("#time-container").css("display", "block");
+            $("#question-container").css("display", "block");
+            $("#answers-container").css("display", "block");
+        }
     }
 
     function displayQuestion() {
@@ -123,22 +132,27 @@ $(document).ready(function () {
             newAnswerItem.attr("value", questionObj.answerOptions[i]);
             $("#answers").append(newAnswerItem);
         }
+        timer.reset();
+        timer.start();
     }
 
     function answerSelectionHandler(e) {
-        var answerSelected = $(this).attr("value");
-        console.log(answerSelected);
-        $("#answers").empty();
-        if (answerSelected === questions[questionCount].correctAnswer) {
-            $("#answers").text("Correct! " + questions[questionCount].answerDescription)
-        } else {
-            $("#answers").text("Wrong. " + questions[questionCount].answerDescription)
-        }
-        questionCount++;
-
         timer.stop();
+        if ($(this).attr("value") === questions[questionCount].correctAnswer) {
+            displayAnswer("Correct! " + questions[questionCount].answerDescription)
+        } else {
+            displayAnswer("Wrong. " + questions[questionCount].answerDescription)
+        }
     }
 
-    $("#start").click(setupGame);
+    function displayAnswer(message) {
+        $("#answers").empty();
+        $("#answers").text(message);
+        questionCount++;
+        $("#continue-button").css("display", "block");
+    }
+
+    $("#start-button").click(setupGame);
+    $("#continue-button").click(displayQuestion);
     $("#answers").on("click", ".answer-option", answerSelectionHandler);
 });

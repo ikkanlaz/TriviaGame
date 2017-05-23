@@ -32,7 +32,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 150px 1fr 50px;
     background-color: #F5EFCF;
     /*color: #FBF9EE;*/
     color: #AEAB9E;
@@ -44,7 +44,11 @@ body {
     text-align: center;
 }
 
-#start {
+#continue-button {
+    display: none;
+}
+
+.button {
     width: 50%;
     display: block;
     margin: auto;
@@ -56,15 +60,15 @@ body {
     border: none;
 }
 
-#start:active {
+.button:active {
     background-color: #F0EEE4;
 }
 
-#start:hover {
+.button:hover {
     outline: none;
 }
 
-#start:focus {
+.button:focus {
     outline: none;
 }
 
