@@ -4,18 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Geography Trivia</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
-    <h1>Geography Trivia</h1>
     <div class="container">
-        
+        <h1 class="header">Geography Trivia</h1>
+        <section class="content">
+            <h2><button id="start">Start</button></h2>
+            <div id="time-container">
+                <p>Time Remaining: <span id="time"></span> Seconds</p>
+            </div>
+            <div id="question-container"></div>
+            <div id="answers-container">
+                <ul id="answers"></ul>
+            </div>
+        </section>
     </div>
 
     <script src="assets/javascript/app.js"></script>

@@ -1,9 +1,110 @@
 body {
     font-family: 'PT Sans', sans-serif;
-    color: #555555;
+    color: #FFFFFF;
     background-image: url(https://ikkanlaz.github.io/TriviaGame/assets/images/cloudy-day.png);
 }
 
 h1 {
+    font-size: 75px;
     font-family: 'Love Ya Like A Sister', cursive;
+}
+
+body {
+    margin: 40px;
+}
+
+.content {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    /*background-color: #004268;*/
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #D9E8C1;
+    text-align: center;
+    line-height: 150px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 150px 1fr;
+    background-color: #F5EFCF;
+    /*color: #FBF9EE;*/
+    color: #AEAB9E;
+    border-radius: 5px;
+}
+
+#time-container, #question-container, #answers-container {
+    display: none;
+    text-align: center;
+}
+
+#start {
+    width: 50%;
+    display: block;
+    margin: auto;
+    font-size: 40px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #BAB7AA;
+    border-radius: 5px;
+    background-color: #FBF9EE;
+    border: none;
+}
+
+#start:active {
+    background-color: #F0EEE4;
+}
+
+#start:hover {
+    outline: none;
+}
+
+#start:focus {
+    outline: none;
+}
+
+.answer-option {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 710px) {
+    .header {
+        line-height: 80px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .container {
+        grid-template-rows: 80px 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        margin: 0;
+    }
+    .header {
+        line-height: 150px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .container {
+        grid-template-rows: 150px 1fr;
+        grid-template-columns: 1fr 20fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 378px) {
+    .header {
+        line-height: 60px;
+    }
+    .container {
+        grid-template-rows: 120px 1fr;
+    }
 }
