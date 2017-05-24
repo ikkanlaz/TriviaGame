@@ -55,16 +55,12 @@ body {
     text-align: center;
 }
 
-#time-container {
-    font-size: 18px;
-}
-
 #question-container {
     font-size: 24px;
     color: #858276;
 }
 
-#answers-container {
+#time-container, #answers-container {
     font-size: 18px;
     color: #939185;
 }
