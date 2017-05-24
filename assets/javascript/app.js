@@ -8,7 +8,7 @@ $(document).ready(function () {
             answerOptions: ["Mozambique", "Madagascar", "Swaziland", "Lesotho"],
             correctAnswer: "Lesotho",
             answerDescription: "South Africa completely surrounds Lesotho",
-            image: "lesotho.png"
+            image: "lesotho-min.png"
         },
         {
             question: "Which of the great lakes does not share a border with Canada?",
@@ -22,7 +22,7 @@ $(document).ready(function () {
             answerOptions: ["Cuba", "Haiti", "Jamaica", "Papau New Guinea"],
             correctAnswer: "Cuba",
             answerDescription: "Cuba is the largest island in the Caribean Sea",
-            image: "caribbean.png"
+            image: "caribbean-min.png"
         },
         {
             question: "What is NOT one of the five boroughs of New York City?",
@@ -36,56 +36,56 @@ $(document).ready(function () {
             answerOptions: ["Toronto", "Montreal", "Vancouver", "Ottawa"],
             correctAnswer: "Ottawa",
             answerDescription: "Ottawa is the capital of Canada",
-            image: "canada.png"
+            image: "canada-min.png"
         },
         {
             question: "How many US states border the Pacific Ocean?",
             answerOptions: ["3", "4", "5", "6"],
             correctAnswer: "5",
             answerDescription: "There are 5 US states which border the Pacific Ocean: California, Washington, Oregon, Hawaii, and Alaska",
-            image: "pacific.png"
+            image: "pacific-min.png"
         },
         {
             question: "What is the capital city of Australia?",
             answerOptions: ["Canberra", "Sydney", "Melbourne", "Brisbane"],
             correctAnswer: "Canberra",
             answerDescription: "Canberra is the capital city of Australia",
-            image: "australia.png"
+            image: "australia-min.png"
         },
         {
             question: "In what country would you find Mount Kilimanjaro?",
             answerOptions: ["Egypt", "Kenya", "Tanzania", "Ethiopia"],
             correctAnswer: "Tanzania",
             answerDescription: "Mount Kilimanjaro is in Tanzania",
-            image: "kilamanjaro.jpg"
+            image: "kilamanjaro-min.jpg"
         },
         {
             question: "The Black Forest is located in what European country?",
             answerOptions: ["Netherlands", "France", "Germany", "Switzerland"],
             correctAnswer: "Germany",
             answerDescription: "The Black Forest is located in Germany",
-            image: "black-forest.jpg"
+            image: "black-forest-min.jpg"
         },
         {
             question: "What country is bordered by both France and Spain?",
             answerOptions: ["Luxembourg", "Liechtenstein", "Vatican City", "Andorra"],
             correctAnswer: "Andorra",
             answerDescription: "Adorra is bordered by both France and Spain",
-            image: "andorra.png"
+            image: "andorra-min.png"
         },
         {
             question: "Santiago is the capital of which country?",
             answerOptions: ["Chile", "Argentina", "Venezuela", "Bolivia"],
             correctAnswer: "Chile",
             answerDescription: "Santiago is capital of Chile",
-            image: "santiago.png"
+            image: "santiago-min.png"
         },
         {
             question: "In which U.S. state would you find Mount Rushmore?",
             answerOptions: ["Nebraska", "South Dakota", "West Virginia", "North Carolina"],
             correctAnswer: "South Dakota",
             answerDescription: "Mount Rushmore is in South Dakota",
-            image: "mount-rushmore.jpg"
+            image: "mount-rushmore-min.jpg"
         }
     ]
     var timer = {
