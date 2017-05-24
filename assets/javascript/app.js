@@ -89,7 +89,7 @@ $(document).ready(function () {
         }
     ]
     var timer = {
-        time: 10,
+        time: 60,
         clockRunning: false,
         intervalId: "",
         start: function () {
@@ -113,7 +113,7 @@ $(document).ready(function () {
             timer.clockRunning = false;
         },
         reset: function () {
-            timer.time = 10;
+            timer.time = 60;
         }
     }
 
