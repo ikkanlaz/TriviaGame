@@ -123,6 +123,7 @@ $(document).ready(function () {
             questionCount = 0;
             gameStarted = true;
             $("#start-button").css("display", "none");
+            $("#continue-button").text("Next Question");
             displayQuestion();
             $("#time-container").css("display", "block");
             $("#question-container").css("display", "block");
@@ -132,6 +133,7 @@ $(document).ready(function () {
 
     function displayFinalScreen() {
         gameStarted = false;
+        $("#time-container").css("display", "none");
         var finalResultsElem = $("<p></p>");
         if (score === 0) {
             finalResultsElem.text("Ouch. You got " + score + " out of " + questions.length + " questions correct.");
