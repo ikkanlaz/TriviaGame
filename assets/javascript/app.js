@@ -190,7 +190,7 @@ $(document).ready(function () {
         $("#answer-image").css("display", "block");
         $("#answer-image").attr("src", "assets/images/" + questions[questionCount].image);
         questionCount++;
-        if (questionCount === questions.length - 1) {
+        if (questionCount === questions.length) {
             $("#continue-button").text("Get Results");
         }
         $("#continue-button").css("display", "block");
